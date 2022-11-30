@@ -11,7 +11,7 @@ class Home extends React.Component {
             <div>
                 <div className="mockHome">
                     <div className="mockLeft">
-                        <img src={require('../assests/mock.png')} height="300px" />
+                        <img src={require('../assests/alu.jpeg')} height="300px" />
                     </div>
                     <div className="mockRight">
                         <div className="mockHeading">PurvChatra Portal</div>

@@ -64,9 +64,9 @@ function Discuss() {
                     <img src={require('../assests/discuss.jpg')} height="300px" />
                 </div>
                 <div className="mockRight">
-                    <div className="mockHeading">Discuss Forum.</div>
+                    <div className="mockHeading">Mentorship</div>
                     <div className="mockIntro">Interactive discussion forum between students and alumni.</div>
-                    <Button variant="contained" color="primary">Ask Query</Button>
+                    <Button variant="contained" color="primary"> Mentoring</Button>
                 </div>
             </div>
 
