@@ -1,0 +1,75 @@
+.mockHome {
+    background-color: rgb(22, 129, 223);
+    padding-top: 50px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.mockLeft {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mockRight {
+    width: 100%;
+}
+
+.mockHeading {
+    padding-top : 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 35px;
+}
+
+.mockIntro {
+    padding-top : 10px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 17px;
+    width: 500px;
+}
+
+.mockTableContainer {
+    padding-top : 50px;
+    padding-bottom: 0px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.mockInterviewerContainer {
+    padding: 10px;
+}
+
+.mockICHeading {
+    font-size: 25px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.inputContainer {
+    padding: 5px;
+    display: inline-block;
+}
+
+.mockLiveFlex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mockAvatarContainer {
+    text-align: center;
+    margin: 10px;
+}
+
+.alignCenter {
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+}
+
+.mockDoclink {
+    width: 600px;
+    
+}

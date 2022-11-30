@@ -1,0 +1,42 @@
+.mockTable {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.16);
+}
+
+.mockRow {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #a0a0a0;
+}
+
+.mockRowName {
+    width: 400px;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.mockRowYear {
+    width: 250px;
+    text-align: right;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.mockRowBranch {
+    width: 250px;
+    text-align: right;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.mockAcceptBtn {
+    flex-grow: 1;
+    margin: 10px;
+    text-align: center;
+}

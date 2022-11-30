@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    font-family: 'Roboto';
+    background-color: #DAE0E2;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat' !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #ffffff; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: rgb(216, 216, 216);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(175, 175, 175); 
+  }

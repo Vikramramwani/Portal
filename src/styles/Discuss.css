@@ -1,0 +1,36 @@
+.discussContainer {
+    flex: 1;
+    margin: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+    background-color: white;
+    padding : 10px;
+}
+
+.discussFilters {
+    height: 400px;
+    width: 350px;
+    position: sticky;
+    top: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4);
+    background-color: white;
+    padding : 10px;
+}
+
+.discussMainContainer {
+    display: flex;
+    align-items: top;
+    margin: 10px;
+}
+
+.line {
+    border: 0.5px solid rgb(144, 144, 144);
+    margin: auto;
+    width: 90%;
+}

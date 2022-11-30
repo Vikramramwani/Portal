@@ -1,0 +1,59 @@
+.testiHead {
+    font-size: 34px;
+    font-weight: 550;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.testiContainer {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.testiCardContainer {
+    display: inline-block;
+    background-color: white;
+    width: 300px;
+    border-radius: 5px;
+    border-top: 5px solid #626ee3;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.15);
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+.testiCardHead{
+    text-align: center;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.testiCardJobTitle {
+    text-align: center;
+    margin: 5px;
+    font-size: 15px;
+    color: rgb(97, 97, 97);
+}
+
+.testiJoblogoContainer {
+    text-align: center;
+    margin: 16px;
+}
+
+.testiJoblogo {
+    height: 25px;
+}
+
+.testiDes {
+    margin: 10px;
+    height: 160px;
+    overflow: auto;
+    font-size: 14px;
+    color: rgb(119, 119, 119);
+    text-align: justify;
+}

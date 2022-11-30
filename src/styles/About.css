@@ -1,0 +1,37 @@
+.aboutContainer {
+    width: 350px;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.aboutHeader {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.aboutContent {
+    padding-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(88, 88, 88);
+}
+
+.aboutLogo {
+    height: 60px;
+}
+
+.aboutContainer:hover {
+    -webkit-box-shadow: 0px 0px 47px -9px rgba(0,0,0,0.38); 
+    -moz-box-shadow: 0px 0px 47px -9px rgba(0,0,0,0.38);
+    box-shadow: 0px 0px 47px -9px rgba(0,0,0,0.38);
+    animation-delay: 1s;
+}
+
+.testiContainer2{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
