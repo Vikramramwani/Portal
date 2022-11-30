@@ -10,7 +10,6 @@ import Mock from './components/Mock'
 import Discuss from './components/Discuss'
 import Profile from './components/Profile'
 import SignIn from './components/SignIn'
-
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -60,6 +59,7 @@ class App extends React.Component {
       </ThemeProvider>
     )
   }
+
 }
 
 export default App;
