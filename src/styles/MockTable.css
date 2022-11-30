@@ -9,7 +9,7 @@
 
 .mockRow {
     display: flex;
-    align-items: center;
+  
     border-bottom: 1px solid #a0a0a0;
 }
 
@@ -18,14 +18,12 @@
     text-align: left;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 20px;
+
 }
 
 .mockRowYear {
     width: 250px;
-    text-align: right;
-    padding-top: 15px;
-    padding-bottom: 15px;
+   
 }
 
 .mockRowBranch {

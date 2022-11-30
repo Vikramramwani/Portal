@@ -15,15 +15,13 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(username, name,type , branch, year, btn) {
-  return {username, name,type, branch, year, btn };
+function createData(EventName, EventDate, btn) {
+  return {EventName, EventDate, btn };
 }
 
 const rows = [
-  createData('YoKash','Kashish', 'Human Resource', 'CO', 'Second', <Button  variant="contained" color="secondary">Interview</Button>),
-  createData('YoKash', 'Kartik', 'DS and Algo', 'CO', 'Third', <Button  variant="contained" color="secondary">Interview</Button>),
-  createData('YoKash', 'Kashish', 'DS and Algo', 'CO', 'Second', <Button  variant="contained" color="secondary">Interview</Button>),
-  createData('YoKash', 'Kashish', 'DS and Algo', 'CO', 'Second', <Button  variant="contained" color="secondary">Interview</Button>),
+  createData('International Conferance On International Technology','14-10-2021', <Button  variant="contained" color="secondary">View</Button>),
+  createData('Workshop on Electric Vehicles Technologies', '11-08-2021', <Button  variant="contained" color="secondary">View</Button>),
 ];
 
 export default function SimpleTable() {
@@ -31,29 +29,24 @@ export default function SimpleTable() {
 
   return (
     <TableContainer component={Paper}>
-      <div className="mockICHeading" style={{padding:'10px'}}>Recent People</div>
+      <div className="mockICHeading" >Past Events</div>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead>
+        <TableHead >
           <TableRow>
-            <TableCell>Username</TableCell>
-            <TableCell align="center">Name</TableCell>
-            <TableCell align="center">Type</TableCell>
-            <TableCell align="center">Branch</TableCell>
-            <TableCell align="center">Year</TableCell>
-            <TableCell align="center"></TableCell>
+            <TableCell >EventName</TableCell>
+            <TableCell >EventDate</TableCell>
+            <TableCell >Get Links</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <TableRow key={row.username}>
+            <TableRow key={row.username} style={{marginLeft:"-40px"}}>
               <TableCell component="th" scope="row">
                 {row.username}
               </TableCell>
-              <TableCell align="center">{row.name}</TableCell>
-              <TableCell align="center">{row.type}</TableCell>
-              <TableCell align="center">{row.branch}</TableCell>
-              <TableCell align="center">{row.year}</TableCell>
-              <TableCell align="center">{row.btn}</TableCell>
+              <TableCell >{row.EventName}</TableCell>
+              <TableCell >{row.EventDate}</TableCell>
+              <TableCell >{row.btn}</TableCell>
             </TableRow>
           ))}
         </TableBody>
