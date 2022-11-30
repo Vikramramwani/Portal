@@ -123,40 +123,23 @@ function Mock() {
         <div>
             <div className="mockHome">
                 <div className="mockLeft">
-                    <img src={require('../assests/mock.png')} height="300px" />
+                    <img src={require('../assests/event.jpg')} height="300px" />
                 </div>
                 <div className="mockRight">
-                    <div className="mockHeading">Mock Interview.</div>
-                    <div className="mockIntro">You can schedule a mock interview with your senior or alumni of 45 mins.</div>
+                    <div className="mockHeading">Events</div>
+                    <div className="mockIntro">add events</div>
                     <Button variant="contained" color="primary">Schedule One</Button>
                 </div>
             </div>
             <div className="mockTableContainer">
-                <Grid container spacing={3}>
-                    <Grid item xs={6}>
+
                         <MuiPickersUtilsProvider utils={DateFnsUtils}>
                             <Paper className="mockInterviewerContainer">
-                                <div className="mockICHeading">Take Interview</div>
+                                <div className="mockICHeading">Schedule Event</div>
                                 <div className="inputContainer">
-                                    <TextField id="outlined-basic" label="Username" variant="outlined" color="secondary" />
-                                </div>
-                                <div className="inputContainer">
-                                    <TextField
-                                        id="outlined-select-currency"
-                                        select
-                                        label="Select"
-                                        value={currency}
-                                        onChange={handleChange}
-                                        variant="outlined"
-                                    >
-                                        {currencies.map(option => (
-                                            <MenuItem key={option.value} value={option.value}>
-                                                {option.label}
-                                            </MenuItem>
-                                        ))}
-                                    </TextField>
-
-                                </div>
+                                <TextField id="outlined-basic" label="Enter Event Name"  color="secondary" />
+                            </div>
+                                
                                 <div className="inputContainer">
                                     <KeyboardDatePicker
                                         color="secondary"
@@ -165,7 +148,7 @@ function Mock() {
                                         format="MM/dd/yyyy"
                                         margin="normal"
                                         id="date-picker-inline"
-                                        label="Date picker"
+                                        label="Event Date"
                                         value={selectedDate}
                                         onChange={handleDateChange}
                                         KeyboardButtonProps={{
@@ -178,7 +161,7 @@ function Mock() {
                                         color="secondary"
                                         margin="normal"
                                         id="time-picker"
-                                        label="Time picker"
+                                        label="Event Start Time"
                                         value={selectedDate}
                                         onChange={handleDateChange}
                                         KeyboardButtonProps={{
@@ -186,99 +169,40 @@ function Mock() {
                                         }}
                                     />
                                 </div>
-                                <Button variant="outlined" color="secondary">Submit</Button>
+                                <div className="inputContainer">
+                                    <KeyboardTimePicker
+                                        color="secondary"
+                                        margin="normal"
+                                        id="time-picker"
+                                        label="Event End Time"
+                                        value={selectedDate}
+                                        onChange={handleDateChange}
+                                        KeyboardButtonProps={{
+                                            'aria-label': 'change time',
+                                        }}
+                                    />
+                                
+                                </div>
+                                <div className="submit">
+                                <Button 
+                      //  type="submit"
+                        Width="100%"
+                      
+                        variant="contained"
+                        color="secondary"
+                        >
+                            Submit
+                        </Button>
+                   
+                                </div>
+                                
                             </Paper>
                         </MuiPickersUtilsProvider>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Paper className="mockInterviewerContainer">
-                            <div className="mockICHeading">Give Interview</div>
-                            <div className="inputContainer">
-                                <TextField id="outlined-basic" label="Username" variant="outlined" color="secondary" />
-                            </div>
-                            <div className="inputContainer">
-                                <TextField id="outlined-basic" label="Name" variant="outlined" color="secondary" />
-                            </div>
-                            <div className="inputContainer">
-                                <TextField id="outlined-basic" label="Branch" variant="outlined" color="secondary" />
-                            </div>
-                            <div className="inputContainer">
-                                <TextField id="outlined-basic" label="Year" variant="outlined" color="secondary" />
-                            </div>
-                            <div className="inputContainer">
-                                <TextField
-                                    id="outlined-select-currency"
-                                    select
-                                    label="Select"
-                                    value={currency}
-                                    onChange={handleChange}
-                                    variant="outlined"
-                                >
-                                    {currencies.map(option => (
-                                        <MenuItem key={option.value} value={option.value}>
-                                            {option.label}
-                                        </MenuItem>
-                                    ))}
-                                </TextField>
-                            </div>
-                            <Button variant="outlined" color="secondary">Submit</Button>
-                        </Paper>
-                    </Grid>
-                </Grid>
             </div>
             <div className="mockTableContainer">
                 <MockTable />
             </div>
-            <div className="mockTableContainer">
-                <Paper className="mockInterviewerContainer">
-                    <div className="mockICHeading">Interview Section</div>
-                    <div className="mockLiveFlex">
-                        <div className="mockAvatarContainer">
-                            <StyledBadge
-                                overlap="circle"
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'right',
-                                }}
-                                variant="dot"
-                            >
-                                <Avatar alt="Remy Sharp" className={classes.large} src="/static/images/avatar/1.jpg" />
-                            </StyledBadge>
-                            <br />
-                            <br />
-                            <span>Rohan Gupta</span>
-                        </div>
-                        <div className="mockAvatarContainer">
-                            <StyledBadge
-                                overlap="circle"
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'right',
-                                }}
-                                variant="dot"
-                            >
-                                <Avatar alt="Kemy Sharp" className={classes.large} src="/static/images/avatar/1.jpg" />
-                            </StyledBadge>
-                            <br />
-                            <br />
-                            <span>Kartik Verma</span>
-                        </div>
-
-                    </div>
-                    <div className="alignCenter">
-                        <Paper component="form" className={classes.root2}>
-                            <InputBase
-                                className={classes.input}
-                                value="https://docs.google.com/document/d/18taaArN65O6jFzGwox3F_0SvGqlgYfki9T_SUJDAylM/edit"
-                                inputProps={{ 'aria-label': 'doc link' }}
-                            />
-                            <IconButton className={classes.iconButton} aria-label="search">
-                                <AssignmentIcon />
-                            </IconButton>
-                        </Paper>
-                    </div>
-                </Paper>
-            </div>
+            
         </div >
     )
 

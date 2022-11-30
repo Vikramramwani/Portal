@@ -13,7 +13,7 @@ class ConnectCard extends React.Component {
     render() {
         return (
             <div className="connectCardContainer">
-               {/* <img src={require('../assests/banner.jpeg')} className="ccBannerImg" /> */}
+               <img src={require('../assests/banner.jpeg')} className="ccBannerImg" /> 
                 <div className="ccAvatorContainer">
                     <img src={require('../assests/avatar.jpeg')} className="ccAvatarImg" />
                 </div>

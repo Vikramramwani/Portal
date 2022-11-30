@@ -9,11 +9,11 @@ class Profile extends React.Component {
             <div>
                 <div className="mockHome">
                     <div className="mockLeft">
-                        <img src={require('../assests/profile_main.png')} height="300px" />
+                        <img src={require('../assests/profile.jpg')} height="300px" />
                     </div>
                     <div className="mockRight">
                         <div className="mockHeading">User Profile.</div>
-                        <div className="mockIntro">Students can setup a great profile here to boost about there skills.</div>
+                        <div className="mockIntro">Students and alumni can setup a great profile here to boost about there skills.</div>
                         <Button variant="contained" color="primary">Update Profile</Button>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ class Profile extends React.Component {
                     <span style={{fontSize: 19, fontWeight: 'bold'}}>Sign In to unlock</span>
                     <br/>
                     <br/>
-                    <span>Thank you for using Amnater, please Sign In to update your profile.</span>
+                    <span>please Sign In to update your profile.</span>
                     <br/>
                     <br/>
                     <br/>   
