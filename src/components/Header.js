@@ -12,7 +12,7 @@ class Header extends React.Component {
 
     render() {
         let home = <div className="heading" onClick= {() =>this.props.onChange('home')}>Home</div>
-        let discuss = <div className="heading" onClick= {() =>this.props.onChange('discuss')}>Discuss</div>
+        let discuss = <div className="heading" onClick= {() =>this.props.onChange('discuss')}>Mentorship</div>
         let connect = <div className="heading" onClick= {() =>this.props.onChange('connect')}>Find Alumni</div>
         let mock = <div className="heading" onClick= {() =>this.props.onChange('mock')}>Events</div>
         let profile = <div className="heading" onClick= {() =>this.props.onChange('profile')}>Profile</div>
