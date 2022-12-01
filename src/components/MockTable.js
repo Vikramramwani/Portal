@@ -48,7 +48,8 @@ export default function SimpleTable() {
             <TableCell >EventName</TableCell>
             <TableCell >EventDate</TableCell>
             <TableCell >End Date</TableCell>
-            <TableCell >Start_time</TableCell>
+            <TableCell >Start time</TableCell>
+            <TableCell >End time</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -60,6 +61,7 @@ export default function SimpleTable() {
               <TableCell >{row.start_date}</TableCell>
               <TableCell >{row.end_date}</TableCell>
               <TableCell >{row.start_time}</TableCell>
+              <TableCell >{row.end_time}</TableCell>
               <TableCell >{row.btn}</TableCell>
             </TableRow>
           ))}
