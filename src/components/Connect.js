@@ -17,31 +17,6 @@ class Connect extends React.Component {
                             post="Google Step Intern 2020"
                             mutualConnects="164"
                         />
-                        {/* <ConnectCard
-                            name="Kashish"
-                            post="Facebook Intern 2020"
-                            mutualConnects="84"
-                        />
-                        <ConnectCard
-                            name="Kushal Aggarwal"
-                            post="Tower Research 2020"
-                            mutualConnects="7"
-                        />
-                        <ConnectCard
-                            name="Kashish"
-                            post="Facebook Intern 2020"
-                            mutualConnects="84"
-                        />
-                        <ConnectCard
-                            name="Kushal Aggarwal"
-                            post="Tower Research 2020"
-                            mutualConnects="7"
-                        />
-                         <ConnectCard
-                            name="Kashish"
-                            post="Facebook Intern 2020"
-                            mutualConnects="84"
-                        /> */}
                     </div>
                 </Paper>
                
