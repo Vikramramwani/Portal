@@ -12,29 +12,31 @@
   
     border-bottom: 1px solid #a0a0a0;
 }
-
-.mockRowName {
+.tbl{
+    word-spacing: 30%;
+}
+/* .mockRowName {
     width: 400px;
     text-align: left;
     padding-top: 15px;
     padding-bottom: 15px;
 
-}
+} */
 
-.mockRowYear {
+/* .mockRowYear {
     width: 250px;
    
-}
+} */
 
-.mockRowBranch {
+/* .mockRowBranch {
     width: 250px;
     text-align: right;
     padding-top: 15px;
     padding-bottom: 15px;
-}
+} */
 
-.mockAcceptBtn {
+/* .mockAcceptBtn {
     flex-grow: 1;
     margin: 10px;
     text-align: center;
-}
+} */

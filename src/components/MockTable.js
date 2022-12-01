@@ -11,7 +11,7 @@ import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 10,
   },
 });
 
@@ -30,7 +30,26 @@ export default function SimpleTable() {
   return (
     <TableContainer component={Paper}>
       <div className="mockICHeading" >Past Events</div>
-      <Table className={classes.table} aria-label="simple table">
+      <table className='tbl'>
+      
+        {rows.map(row => (
+            <tr key={row.username}>
+              <TableCell component="th" scope="row">
+                {row.username}
+              </TableCell>
+              <TableCell >{row.EventName}</TableCell>
+              <TableCell >{row.EventDate}</TableCell>
+              <TableCell >{row.btn}</TableCell>
+            </tr>
+          ))}
+        {/* <tr  key={row.username} style={{marginLeft:"40px"}}>
+          <td>Anom</td>
+          <td>19</td>
+          <td>Male</td>
+        </tr> */}
+      </table>
+      
+      {/* <Table className={classes.table} aria-label="simple table">
         <TableHead >
           <TableRow>
             <TableCell >EventName</TableCell>
@@ -50,7 +69,7 @@ export default function SimpleTable() {
             </TableRow>
           ))}
         </TableBody>
-      </Table>
+      </Table> */}
     </TableContainer>
   );
 }

@@ -24,11 +24,11 @@ class Home extends React.Component {
                     <span className="rcHead">PEOPLE FROM YOUR COLLEGE, YOU MIGHT KNOW</span>
                     <div style={{overflow: 'auto'}}>
                         <ConnectCard
-                            name="Mandeep Singh"
+                            name="Kunal Rawat"
                             post="Google Step Intern 2020"
                             mutualConnects="164"
                         />
-                        <ConnectCard
+                        {/* <ConnectCard
                             name="Kashish"
                             post="Facebook Intern 2020"
                             mutualConnects="84"
@@ -52,7 +52,7 @@ class Home extends React.Component {
                             name="Kashish"
                             post="Facebook Intern 2020"
                             mutualConnects="84"
-                        />
+                        /> */}
                     </div>
                 </Paper>
                 <Testimonials />
