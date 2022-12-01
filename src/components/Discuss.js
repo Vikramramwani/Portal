@@ -76,16 +76,22 @@ function Discuss() {
         <div>
         <div className="mockHome">
             <div className="mockLeft">
-                <img src={require('../assests/discuss.jpg')} height="300px" />
+                <img src={require('../assests/img3.png')} height="300px" />
             </div>
             <div className="mockRight">
                 <div className="mockHeading">Mentorship</div>
                 <div className="mockIntro">Interactive discussion forum between students and alumni.</div>
-                <Button variant="contained" color="primary"> Mentoring</Button>
+                {/* <Button variant="contained" color="primary"> Mentoring</Button> */}
+                <Button 
+                  variant="contained" 
+                  color="secondary"
+                  style = {{width: '25%', marginTop: 20}}
+                //   onClick={submitdetails}
+                  >Mentoring</Button>
             </div>
         </div>
 
-        <Paper component="form" className={classes.root}>
+        {/* <Paper component="form" className={classes.root}>
             <InputBase
                 className={classes.input}
                 placeholder="Search"
@@ -94,7 +100,7 @@ function Discuss() {
             <IconButton type="submit" className={classes.iconButton} aria-label="search">
                 <SearchIcon />
             </IconButton>
-        </Paper>
+        </Paper> */}
 
         <div className="discussMainContainer">
             <div className="discussFilters">

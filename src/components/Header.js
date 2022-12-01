@@ -1,6 +1,8 @@
 import React from 'react';
 import '../styles/Header.css';
-import { Button } from '@material-ui/core'
+import { Button } from '@material-ui/core';
+import { TbComponents } from "react-icons/tb";
+
 import { height } from '@material-ui/system';
 
 class Header extends React.Component {
@@ -35,8 +37,12 @@ class Header extends React.Component {
 
         return (
             <div className="header">
+            <div className='header'>
                 <div className="imgContainer">
-                    <img src={require('../assests/alu_logo.png') } height="85" />
+                <TbComponents color="white" size={35}/>
+                    {/* <img src={require('../assests/lg.png') } height="85" /> */}
+                </div>
+                <div className='name'>PurvChatra Portal</div>
                 </div>
                 {home}
                 {discuss}
@@ -44,7 +50,8 @@ class Header extends React.Component {
                 {connect}
                 {mock}
                 <div className="btnContainer">
-                    <Button variant="outlined" color="primary" onClick= {() =>this.props.onChange('signing')}>Sign In</Button>
+                
+                    <Button variant="outlined" color="primary" onClick= {() =>this.props.onChange('signin')}>Sign In</Button>
                 </div>
 
             </div>

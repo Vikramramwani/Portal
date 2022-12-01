@@ -9,12 +9,18 @@ class Profile extends React.Component {
             <div>
                 <div className="mockHome">
                     <div className="mockLeft">
-                        <img src={require('../assests/profile.jpg')} height="300px" />
+                        <img src={require('../assests/img5.png')} height="300px" />
                     </div>
                     <div className="mockRight">
                         <div className="mockHeading">User Profile.</div>
                         <div className="mockIntro">Students and alumni can setup a great profile here to boost about there skills.</div>
-                        <Button variant="contained" color="primary">Update Profile</Button>
+                        <Button 
+                  variant="contained" 
+                  color="secondary"
+                  style = {{width: '30%', marginTop: 20}}
+                //   onClick={submitdetails}
+                  >Update Profile</Button>
+                        {/* <Button variant="contained" color="primary">Update Profile</Button> */}
                     </div>
                 </div>
                 <div className="profileNo">

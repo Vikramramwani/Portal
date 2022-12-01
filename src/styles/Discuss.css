@@ -30,7 +30,7 @@
 }
 
 .line {
-    border: 0.5px solid rgb(144, 144, 144);
+  /* //  border: 0.5px solid rgb(144, 144, 144); */
     margin: auto;
     width: 90%;
 }

@@ -11,12 +11,12 @@ class Home extends React.Component {
             <div>
                 <div className="mockHome">
                     <div className="mockLeft">
-                        <img src={require('../assests/alu.jpeg')} height="300px" />
+                        <img src={require('../assests/img2.png')} height="300px" />
                     </div>
                     <div className="mockRight">
-                        <div className="mockHeading">PurvChatra Portal</div>
+                        <div className="mockHeading" >PurvChatra Portal</div>
                         <div className="mockIntro">Place to find and interact with alumni</div>
-                        <Button variant="contained" color="primary">Know more</Button>
+                        {/* <Button variant="contained" color="secondary">Know more</Button> */}
                     </div>
                 </div>
                 <About/>
@@ -28,34 +28,10 @@ class Home extends React.Component {
                             post="Google Step Intern 2020"
                             mutualConnects="164"
                         />
-                        {/* <ConnectCard
-                            name="Kashish"
-                            post="Facebook Intern 2020"
-                            mutualConnects="84"
-                        />
-                        <ConnectCard
-                            name="Kushal Aggarwal"
-                            post="Tower Research 2020"
-                            mutualConnects="7"
-                        />
-                        <ConnectCard
-                            name="Kashish"
-                            post="Facebook Intern 2020"
-                            mutualConnects="84"
-                        />
-                        <ConnectCard
-                            name="Kushal Aggarwal"
-                            post="Tower Research 2020"
-                            mutualConnects="7"
-                        />
-                         <ConnectCard
-                            name="Kashish"
-                            post="Facebook Intern 2020"
-                            mutualConnects="84"
-                        /> */}
+                       
                     </div>
                 </Paper>
-                <Testimonials />
+               <Testimonials />
             </div>
         )
     }

@@ -4,6 +4,8 @@
     text-align: center;
     padding-top: 50px;
     padding-bottom: 30px;
+    color:#4e77e3;
+    font-weight: bold;
 }
 
 .testiContainer {
@@ -37,7 +39,7 @@
     text-align: center;
     margin: 5px;
     font-size: 15px;
-    color: rgb(97, 97, 97);
+
 }
 
 .testiJoblogoContainer {
@@ -54,6 +56,6 @@
     height: 160px;
     overflow: auto;
     font-size: 14px;
-    color: rgb(119, 119, 119);
+    
     text-align: justify;
 }

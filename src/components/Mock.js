@@ -148,7 +148,7 @@ function Mock() {
     return (
         <div className="discussMainContainer" style={{height:"550px"}}>
             <div className="discussFilters" style={{height:"550px"}}>
-                <div style={{fontSize: 19, fontWeight: 'bold', textAlign:'center', padding: 15}}>Post Your Query</div>
+                <div style={{fontSize: 19, fontWeight: 'bold', textAlign:'center', padding: 15}}>Schedule New Event</div>
                 <hr className="line"/>
                 <div style={{padding : 10}}>
                 <TextField id="outlined-basic" label="Heading" variant="outlined"  color='secondary' style={{width:'100%'}} onChange={(e)=>setTitle(e.target.value)} placeholder={title}/>
@@ -190,7 +190,7 @@ function Mock() {
                   color="secondary"
                   style = {{width: '100%', marginTop: 20}}
                   onClick={handleSubmit}
-                  >Post Query</Button>
+                  >ADD</Button>
                 </div>
                 
             </div>

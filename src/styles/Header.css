@@ -1,12 +1,18 @@
 .header {
     display: flex;
-    background-color:rgb(22, 129, 223);
+    background-color:#4e77e3;
     padding: 15px;
     align-items: center;
 }
 
 .imgContainer {
-    flex-grow: 1;
+    flex-grow: 2;
+}
+.name{
+    color: white;
+    font-weight: bold;
+    font-size:x-large;
+    
 }
 
 .heading {
@@ -14,6 +20,7 @@
     margin-left: 10px;
     margin-right: 10px;
     padding: 3px;
+    font-weight: bold;
     cursor: pointer;
 }
 
