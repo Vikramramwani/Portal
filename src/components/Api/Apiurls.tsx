@@ -4,6 +4,7 @@ export class ApiUrls{
 
     private query='http://localhost:8000/api/query';
     private event="http://localhost:8000/api/events";
+    private usersinfo = "http://localhost:8000/api/infoRegister"
 
     fetchQuery(){
         return axios.get(this.query);
