@@ -50,7 +50,9 @@ class Header extends React.Component {
                 {connect}
                 {mock}
                 <div className="btnContainer">
+
                 
+
                     <Button variant="outlined" color="primary" onClick= {() =>this.props.onChange('signin')}>Sign In</Button>
                 </div>
 

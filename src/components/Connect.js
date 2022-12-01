@@ -1,47 +1,34 @@
 import React from 'react';
 import '../styles/Connect.css';
 import ConnectCard from './ConnectCard';
-import { Paper} from '@material-ui/core'
+import { Paper} from '@material-ui/core';
+import {useState , useEffect} from 'react'
+import axios from 'axios';
+export default function Connect(){
 
-
-
-class Connect extends React.Component {
-    render() {
+        const [st,setSt]=useState([])
+        useEffect(() => {
+          axios.get("http://localhost:8000/api/infoRegister").then((res)=>{
+            // setSt(res.data);
+            console.log(res.data);
+            setSt(res.data.Data);
+          }).catch((err)=>{
+            console.log(err);
+          })
+        }, [])
+        
         return (
             <div>
              <Paper className="recConnect">
                     <span className="rcHead">PEOPLE FROM YOUR COLLEGE, YOU MIGHT KNOW</span>
                     <div style={{overflow: 'auto'}}>
-                        <ConnectCard
-                            name="Kunal Rawat"
-                            post="Google Step Intern 2020"
-                            mutualConnects="164"
-                        />
-                        {/* <ConnectCard
-                            name="Kashish"
-                            post="Facebook Intern 2020"
-                            mutualConnects="84"
-                        />
-                        <ConnectCard
-                            name="Kushal Aggarwal"
-                            post="Tower Research 2020"
-                            mutualConnects="7"
-                        />
-                        <ConnectCard
-                            name="Kashish"
-                            post="Facebook Intern 2020"
-                            mutualConnects="84"
-                        />
-                        <ConnectCard
-                            name="Kushal Aggarwal"
-                            post="Tower Research 2020"
-                            mutualConnects="7"
-                        />
-                         <ConnectCard
-                            name="Kashish"
-                            post="Facebook Intern 2020"
-                            mutualConnects="84"
-                        /> */}
+                    {st.map((ele)=>
+                       <ConnectCard
+                       name={ele.name}
+                       post={ele.role}
+                       email={ele.email}
+                   />
+                       ) }
                     </div>
                 </Paper>
                
@@ -49,6 +36,3 @@ class Connect extends React.Component {
         )
 
     }
-}
-
-export default Connect;
