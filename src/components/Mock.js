@@ -13,6 +13,7 @@ import Avatar from '@material-ui/core/Avatar';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import IconButton from '@material-ui/core/IconButton';
+import axios from 'axios';
 
 import MockTable from './MockTable'
 
@@ -107,97 +108,91 @@ const useStyles = makeStyles(theme => ({
 
 function Mock() {
     const classes = useStyles();
+    const [selectedstartDate, setSelectedStartDate] = React.useState("");
+    const [selectedEndDate, setSelectedEndDate] = React.useState("");
+    const [selectedstarttime, setSelectedStartTime] = React.useState("");
+    const [selectedendtime, setSelectedEndTime] = React.useState("");
+    const [title, setTitle] = React.useState("");
 
-    const [currency, setCurrency] = React.useState('EUR');
+    
 
-    const handleChange = event => {
-        setCurrency(event.target.value);
-    };
-    const [selectedDate, setSelectedDate] = React.useState(new Date('2020-02-16T21:11:54'));
+    const handleSubmit = () =>{
+        let d=
+            {
+                "title" : title,
+                "start_date" : selectedstartDate,
+                "end_date" : selectedEndDate,
+                "start_time" : selectedstarttime ,
+                "end_time" : selectedendtime 
+            }
+            console.log(title);
+            console.log(selectedEndDate);
+            console.log(selectedstartDate);
+            console.log(selectedendtime);
+            console.log(selectedEndDate);
+        
+        axios.post("http://localhost:8000/api/events",d).then((res)=>{
+            console.log(res);
+            setTitle("");
+            setSelectedEndDate("");
+            setSelectedStartDate("");
+            setSelectedStartTime("");
+            setSelectedEndTime("");
+            window.location.reload();
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }
 
-    const handleDateChange = date => {
-        setSelectedDate(date);
-    };
 
     return (
-        <div>
-            <div className="mockHome">
-                <div className="mockLeft">
-                    <img src={require('../assests/event.jpg')} height="300px" />
+        <div className="discussMainContainer" style={{height:"550px"}}>
+            <div className="discussFilters" style={{height:"550px"}}>
+                <div style={{fontSize: 19, fontWeight: 'bold', textAlign:'center', padding: 15}}>Post Your Query</div>
+                <hr className="line"/>
+                <div style={{padding : 10}}>
+                <TextField id="outlined-basic" label="Heading" variant="outlined"  color='secondary' style={{width:'100%'}} onChange={(e)=>setTitle(e.target.value)} placeholder={title}/>
+                <TextField
+                  multiline 
+                 label="Start Date"
+                 variant="outlined"  
+                 color='secondary' 
+                 style={{width:'100%',marginTop: 20}}
+                 placeholder={selectedstartDate} 
+                 onChange={(e)=>setSelectedStartDate(e.target.value)}/>
+                 <TextField
+                  multiline 
+                 label="End Date"
+                 variant="outlined"  
+                 color='secondary' 
+                 style={{width:'100%',marginTop: 20}}
+                 placeholder={selectedEndDate} 
+                 onChange={(e)=>setSelectedEndDate(e.target.value)}/>
+                 <TextField
+                  multiline 
+                 label="Start Time"
+                 variant="outlined"  
+                 color='secondary' 
+                 style={{width:'100%',marginTop: 20}}
+                 placeholder={selectedstarttime} 
+                 onChange={(e)=>setSelectedStartTime(e.target.value)}/>
+                 <TextField
+                  multiline 
+                 label="End Time"
+                 variant="outlined"  
+                 color='secondary' 
+                 style={{width:'100%',marginTop: 20}}
+                 placeholder={selectedendtime} 
+                 onChange={(e)=>setSelectedEndTime(e.target.value)}/>
+                 
+                 <Button 
+                  variant="contained" 
+                  color="secondary"
+                  style = {{width: '100%', marginTop: 20}}
+                  onClick={handleSubmit}
+                  >Post Query</Button>
                 </div>
-                <div className="mockRight">
-                    <div className="mockHeading">Events</div>
-                    <div className="mockIntro">add events</div>
-                    <Button variant="contained" color="primary">Schedule One</Button>
-                </div>
-            </div>
-            <div className="mockTableContainer">
-
-                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                            <Paper className="mockInterviewerContainer">
-                                <div className="mockICHeading">Schedule Event</div>
-                                <div className="inputContainer">
-                                <TextField id="outlined-basic" label="Enter Event Name"  color="secondary" />
-                            </div>
-                                
-                                <div className="inputContainer">
-                                    <KeyboardDatePicker
-                                        color="secondary"
-                                        disableToolbar
-                                        variant="inline"
-                                        format="MM/dd/yyyy"
-                                        margin="normal"
-                                        id="date-picker-inline"
-                                        label="Event Date"
-                                        value={selectedDate}
-                                        onChange={handleDateChange}
-                                        KeyboardButtonProps={{
-                                            'aria-label': 'change date',
-                                        }}
-                                    />
-                                </div>
-                                <div className="inputContainer">
-                                    <KeyboardTimePicker
-                                        color="secondary"
-                                        margin="normal"
-                                        id="time-picker"
-                                        label="Event Start Time"
-                                        value={selectedDate}
-                                        onChange={handleDateChange}
-                                        KeyboardButtonProps={{
-                                            'aria-label': 'change time',
-                                        }}
-                                    />
-                                </div>
-                                <div className="inputContainer">
-                                    <KeyboardTimePicker
-                                        color="secondary"
-                                        margin="normal"
-                                        id="time-picker"
-                                        label="Event End Time"
-                                        value={selectedDate}
-                                        onChange={handleDateChange}
-                                        KeyboardButtonProps={{
-                                            'aria-label': 'change time',
-                                        }}
-                                    />
-                                
-                                </div>
-                                <div className="submit">
-                                <Button 
-                      //  type="submit"
-                        Width="100%"
-                      
-                        variant="contained"
-                        color="secondary"
-                        >
-                            Submit
-                        </Button>
-                   
-                                </div>
-                                
-                            </Paper>
-                        </MuiPickersUtilsProvider>
+                
             </div>
             <div className="mockTableContainer">
                 <MockTable />
