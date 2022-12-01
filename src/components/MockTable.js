@@ -8,6 +8,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { Button } from '@material-ui/core';
+import { useState , useEffect} from 'react';
+import axios from 'axios';
 
 const useStyles = makeStyles({
   table: {
@@ -26,6 +28,17 @@ const rows = [
 
 export default function SimpleTable() {
   const classes = useStyles();
+  const [dat,setDat]=useState([]);
+
+  useEffect(()=>{
+    axios.get("http://localhost:8000/api/events").then((res)=>{
+        console.log(res.data.students);
+        setDat(res.data.students);
+    }).catch((err)=>{
+        console.log(err);
+    })
+},[])
+
 
   return (
     <TableContainer component={Paper}>
@@ -54,17 +67,19 @@ export default function SimpleTable() {
           <TableRow>
             <TableCell >EventName</TableCell>
             <TableCell >EventDate</TableCell>
-            <TableCell >Get Links</TableCell>
+            <TableCell >End Date</TableCell>
+            <TableCell >Start_time</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
-            <TableRow key={row.username} style={{marginLeft:"-40px"}}>
+          {dat.map(row => (
+            <TableRow key={row.title} style={{marginLeft:"-40px"}}>
               <TableCell component="th" scope="row">
-                {row.username}
+                {row.title}
               </TableCell>
-              <TableCell >{row.EventName}</TableCell>
-              <TableCell >{row.EventDate}</TableCell>
+              <TableCell >{row.start_date}</TableCell>
+              <TableCell >{row.end_date}</TableCell>
+              <TableCell >{row.start_time}</TableCell>
               <TableCell >{row.btn}</TableCell>
             </TableRow>
           ))}
