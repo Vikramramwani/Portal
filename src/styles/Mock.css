@@ -1,5 +1,5 @@
 .mockHome {
-    background-color: rgb(22, 129, 223);
+    background-color: white;
     padding-top: 50px;
     padding-bottom: 80px;
     display: flex;
@@ -19,15 +19,15 @@
 .mockHeading {
     padding-top : 10px;
     padding-bottom: 10px;
-    color: white;
-    font-size: 35px;
+    color: #4e77e3;
+    font-size: 50px;
 }
 
 .mockIntro {
     padding-top : 10px;
     padding-bottom: 20px;
-    color: white;
-    font-size: 17px;
+    color: #4e77e3;
+    font-size: 20px;
     width: 500px;
 }
 

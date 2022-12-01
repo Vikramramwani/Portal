@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Button, TextField } from "@material-ui/core";
 import ReplyIcon from "@material-ui/icons/Reply";
 import axios from "axios";
+import ConnectCard from "./ConnectCard";
 
 import "../styles/Discuss.css";
 
@@ -65,23 +66,29 @@ function Discuss() {
       });
   };
 
-  const classes = useStyles();
-  return (
-    <div>
-      <div className="mockHome">
-        <div className="mockLeft">
-          <img src={require("../assests/discuss.jpg")} height="300px" alt="" />
+    
+    const classes = useStyles();
+    return (
+        
+   <>
+        <div>
+        <div className="mockHome">
+            <div className="mockLeft">
+                <img src={require('../assests/img3.png')} height="300px" />
+            </div>
+            <div className="mockRight">
+                <div className="mockHeading">Mentorship</div>
+                <div className="mockIntro">Interactive discussion forum between students and alumni.</div>
+                {/* <Button variant="contained" color="primary"> Mentoring</Button> */}
+                <Button 
+                  variant="contained" 
+                  color="secondary"
+                  style = {{width: '25%', marginTop: 20}}
+                //   onClick={submitdetails}
+                  >Mentoring</Button>
+            </div>
         </div>
-        <div className="mockRight">
-          <div className="mockHeading">Mentorship</div>
-          <div className="mockIntro">
-            Interactive discussion forum between students and alumni.
-          </div>
-          <Button variant="contained" color="primary">
-            {" "}
-            Mentoring
-          </Button>
-        </div>
+        
       </div>
 
       <div className="discussMainContainer">
@@ -155,7 +162,7 @@ function Discuss() {
           ))}
         </div>
       </div>
-    </div>
+      </>
   );
 }
 

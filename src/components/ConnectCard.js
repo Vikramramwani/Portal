@@ -3,6 +3,7 @@ import '../styles/ConnectCard.css';
 import { Button } from '@material-ui/core'
 import LinkIcon from '@material-ui/icons/Link';
 
+
 class ConnectCard extends React.Component {
     constructor(props) {
         super(props)
@@ -13,7 +14,7 @@ class ConnectCard extends React.Component {
     render() {
         return (
             <div className="connectCardContainer">
-               <img src={require('../assests/banner.jpeg')} className="ccBannerImg" /> 
+               <img src={require('../assests/banner.jpg')} className="ccBannerImg" /> 
                 <div className="ccAvatorContainer">
                     <img src={require('../assests/avatar.jpeg')} className="ccAvatarImg" />
                 </div>
@@ -25,7 +26,13 @@ class ConnectCard extends React.Component {
                         <div><LinkIcon className="ccIcon" /></div>
                         <div>{this.props.mutualConnects} Mutual Connections</div>
                     </div>
-                    <Button variant="outlined" color="secondary" style={{ width: '100%', margin: '4%' }}>Connect</Button>
+                    <Button 
+                  variant="contained" 
+                  color="secondary"
+                  style = {{width: '100%', marginTop: 20}}
+                //   onClick={submitdetails}
+                  >Connect</Button>
+                    {/* <Button variant="outlined" color="secondary" style={{ width: '100%' }}>Connect</Button> */}
                 </div>
             </div>
         )

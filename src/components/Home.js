@@ -21,29 +21,41 @@ export default function Home() {
       });
   }, []);
 
-  return (
-    <div>
-      <div className="mockHome">
-        <div className="mockLeft">
-          <img src={require("../assests/alu.jpeg")} height="300px" alt="" />
-        </div>
-        <div className="mockRight">
-          <div className="mockHeading">PurvChatra Portal</div>
-          <div className="mockIntro">
-            Place to find and interact with alumni
-          </div>
-        </div>
-      </div>
-      <About />
-      <Paper className="recConnect">
-        <span className="rcHead">PEOPLE FROM YOUR COLLEGE, YOU MIGHT KNOW</span>
-        <div style={{ overflow: "auto" }}>
-          {st.map((ele) => (
-            <ConnectCard name={ele.name} post={ele.role} email={ele.email} />
-          ))}
-        </div>
-      </Paper>
-      <Testimonials />
-    </div>
-  );
-}
+        return (
+            <div>
+                <div className="mockHome">
+                    <div className="mockLeft">
+                        <img src={require('../assests/img2.png')} height="300px" />
+                    </div>
+                    <div className="mockRight">
+                        <div className="mockHeading" >PurvChatra Portal</div>
+                        <div className="mockIntro">Place to find and interact with alumni</div>
+                        {/* <Button variant="contained" color="secondary">Know more</Button> */}
+                    </div>
+                </div>
+                <About/>
+                <Paper className="recConnect">
+                    <span className="rcHead">PEOPLE FROM YOUR COLLEGE, YOU MIGHT KNOW</span>
+                    <div style={{overflow: 'auto'}}>
+
+                        <ConnectCard
+                            name="Kunal Rawat"
+                            post="Google Step Intern 2020"
+                            mutualConnects="164"
+                        />
+                       
+
+                       {st.map((ele)=>
+                       <ConnectCard
+                       name={ele.name}
+                       post={ele.role}
+                       email={ele.email}
+                   />
+                       ) }
+
+                    </div>
+                </Paper>
+               <Testimonials />
+            </div>
+        )
+    }

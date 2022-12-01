@@ -1,10 +1,10 @@
 .footer {
-    background-color:rgb(22, 129, 223);
+    background-color:#4e77e3;
     padding:40px;
     display: flex;
-    align-items: center;
+    align-items:left;
     color: white;
-    justify-content: center;
+    justify-content: left;
 }
 
 .footerRight {

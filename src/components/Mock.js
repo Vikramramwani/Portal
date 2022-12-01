@@ -78,81 +78,63 @@ function Mock() {
       });
   };
 
-  return (
-    <div className="discussMainContainer" style={{ height: "550px" }}>
-      <div className="discussFilters" style={{ height: "550px" }}>
-        <div
-          style={{
-            fontSize: 19,
-            fontWeight: "bold",
-            textAlign: "center",
-            padding: 15,
-          }}
-        >
-          Post Your Query
-        </div>
-        <hr className="line" />
-        <div style={{ padding: 10 }}>
-          <TextField
-            id="outlined-basic"
-            label="Heading"
-            variant="outlined"
-            color="secondary"
-            style={{ width: "100%" }}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder={title}
-          />
-          <TextField
-            multiline
-            label="Start Date"
-            variant="outlined"
-            color="secondary"
-            style={{ width: "100%", marginTop: 20 }}
-            placeholder={selectedstartDate}
-            onChange={(e) => setSelectedStartDate(e.target.value)}
-          />
-          <TextField
-            multiline
-            label="End Date"
-            variant="outlined"
-            color="secondary"
-            style={{ width: "100%", marginTop: 20 }}
-            placeholder={selectedEndDate}
-            onChange={(e) => setSelectedEndDate(e.target.value)}
-          />
-          <TextField
-            multiline
-            label="Start Time"
-            variant="outlined"
-            color="secondary"
-            style={{ width: "100%", marginTop: 20 }}
-            placeholder={selectedstarttime}
-            onChange={(e) => setSelectedStartTime(e.target.value)}
-          />
-          <TextField
-            multiline
-            label="End Time"
-            variant="outlined"
-            color="secondary"
-            style={{ width: "100%", marginTop: 20 }}
-            placeholder={selectedendtime}
-            onChange={(e) => setSelectedEndTime(e.target.value)}
-          />
+    return (
+        <div className="discussMainContainer" style={{height:"550px"}}>
+            <div className="discussFilters" style={{height:"550px"}}>
+                <div style={{fontSize: 19, fontWeight: 'bold', textAlign:'center', padding: 15}}>Schedule New Event</div>
+                <hr className="line"/>
+                <div style={{padding : 10}}>
+                <TextField id="outlined-basic" label="Heading" variant="outlined"  color='secondary' style={{width:'100%'}} onChange={(e)=>setTitle(e.target.value)} placeholder={title}/>
+                <TextField
+                  multiline 
+                 label="Start Date"
+                 variant="outlined"  
+                 color='secondary' 
+                 style={{width:'100%',marginTop: 20}}
+                 placeholder={selectedstartDate} 
+                 onChange={(e)=>setSelectedStartDate(e.target.value)}/>
+                 <TextField
+                  multiline 
+                 label="End Date"
+                 variant="outlined"  
+                 color='secondary' 
+                 style={{width:'100%',marginTop: 20}}
+                 placeholder={selectedEndDate} 
+                 onChange={(e)=>setSelectedEndDate(e.target.value)}/>
+                 <TextField
+                  multiline 
+                 label="Start Time"
+                 variant="outlined"  
+                 color='secondary' 
+                 style={{width:'100%',marginTop: 20}}
+                 placeholder={selectedstarttime} 
+                 onChange={(e)=>setSelectedStartTime(e.target.value)}/>
+                 <TextField
+                  multiline 
+                 label="End Time"
+                 variant="outlined"  
+                 color='secondary' 
+                 style={{width:'100%',marginTop: 20}}
+                 placeholder={selectedendtime} 
+                 onChange={(e)=>setSelectedEndTime(e.target.value)}/>
+                 
+                 <Button 
+                  variant="contained" 
+                  color="secondary"
+                  style = {{width: '100%', marginTop: 20}}
+                  onClick={handleSubmit}
+                  >ADD</Button>
+                </div>
+                
+            </div>
+            <div className="mockTableContainer">
+                <MockTable />
+            </div>
+            
+      </div >
+    
 
-          <Button
-            variant="contained"
-            color="secondary"
-            style={{ width: "100%", marginTop: 20 }}
-            onClick={handleSubmit}
-          >
-            Post Query
-          </Button>
-        </div>
-      </div>
-      <div className="mockTableContainer">
-        <MockTable />
-      </div>
-    </div>
+         
   );
 }
 
